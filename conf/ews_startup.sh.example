@@ -1,1 +1,1 @@
-java -jar /app/ik-crm-search-service-1.1.0-SNAPSHOT.jar
+java -jar -Dserver.port=$(env  | grep port.slbhttp0 | grep -oe '[^=]*$') /app/ik-crm-import-service-1.0.0-SNAPSHOT.jar

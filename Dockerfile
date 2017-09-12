@@ -7,14 +7,14 @@ COPY entrypoint.sh /app/
 
 RUN echo "exec command"
 RUN mkdir -p /app
-RUN mkdir /app/logs
+RUN rm -r /app/logs
 RUN mkdir -p /acs/conf
 
 WORKDIR /app/
 
-RUN ln -sf /acs/log /app/logs
+RUN ln -sf /acs/log /app/logs/
 
-EXPOSE 8090
+# EXPOSE 8090
 
 # VOLUME /var/lib/elasticsearch
 
