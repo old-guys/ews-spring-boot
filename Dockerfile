@@ -7,12 +7,12 @@ COPY entrypoint.sh /app/
 
 RUN echo "exec command"
 RUN mkdir -p /app
-RUN rm -r /app/logs
+RUN rm -rf /app/logs
 RUN mkdir -p /acs/conf
 
 WORKDIR /app/
 
-RUN ln -sf /acs/log /app/logs/
+RUN ln -sf /acs/log /app/logs
 
 # EXPOSE 8090
 
